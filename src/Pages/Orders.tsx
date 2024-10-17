@@ -77,6 +77,7 @@ function Orders() {
 
 
             navigate("/stocks");
+            refreshPage();
 
 
         } catch (error) {
@@ -127,9 +128,9 @@ function Orders() {
 
                     <div className="container mx-auto my-auto">
                         <div>
-                            <h1 className="text-blue-700 font-bold text-3xl">Item List</h1>
+                            <h1 className="text-blue-700 font-bold text-3xl sm:text-center">Item List</h1>
 
-                            <div className="w-10 h-10 my-5 mx-[1200px]">
+                            <div className="w-10 h-10 my-5 lg:mx-[1200px] sm:mx-[400px]">
 
                                 <p className="mx-8 border text-red-600">{cart}</p>
                                 <img src="/src/assets/shopping cart.jpeg" />
@@ -141,7 +142,7 @@ function Orders() {
 
                                     const itemStock = stock.find(stock => stock.item.ino === Item.ino);
                                     return (
-                                        <ul className="border-2 border-black my-3 mx-3 w-[400px] p-3 rounded-lg bg-green-400 font-bold text-center inline-flex cursor-pointer" onClick={() => addToCart(Item)}>
+                                        <ul className="border-2 border-black my-3 mx-3 w-[400px] p-3 rounded-lg bg-green-400 font-bold text-center lg:inline-flex cursor-pointer md:inline-flex sm:inline-flex" onClick={() => addToCart(Item)}>
                                             <li className="text-blue-700 p-2">{Item.iname}</li>
                                             <li className="text-red-600 p-2">Rs. {Item.price}.00</li>
                                             <li className="text-black p-2">{Item.category.cname} Category</li>
@@ -157,7 +158,7 @@ function Orders() {
                             }
 
                             <div className="p-2">
-                                <div className="text-xl text-slate-800 font-semibold mb-5">New Order</div>
+                                <div className="text-xl text-slate-800 font-semibold mb-5 sm:text-center">New Order</div>
                                 <table className="table-auto w-full">
                                     <thead>
                                         <tr className="bg-slate-200 text-sm text-slate-600 font-bold">

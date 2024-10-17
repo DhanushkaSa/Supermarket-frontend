@@ -109,17 +109,17 @@ function Items() {
                         <form>
                             <div className="border-2 border-black mt-5 rounded-lg bg-gray-800  shadow-lg">
                                 <p className="p-2 my-5 mx-5 text-xl font-semibold text-white">Item Name</p> <br />
-                                <input type="text" className="mx-10 py-3 px-3 w-[800px] border-2 border-black rounded-lg" placeholder="Item Name" value={itemName} onChange={function (event) {
+                                <input type="text" className="mx-10 py-3 px-3 w-[800px] border-2 border-black rounded-lg sm:w-[300px] lg:w-[700px] max-w-[800px]" placeholder="Item Name" value={itemName} onChange={function (event) {
                                     setItemName(event.target.value);
                                 }} />
 
                                 <p className="p-2 text-xl mx-5 font-semibold text-white">Item Price</p> <br />
-                                <input type="number" className="mx-10 py-3 px-3 w-[800px] border-2 mt-1 border-black rounded-lg" placeholder="Item Price" value={price} onChange={function (event:any) {
+                                <input type="number" className="mx-10 py-3 px-3 w-[800px] border-2 mt-1 border-black rounded-lg sm:w-[300px] lg:w-[700px] max-w-[800px]" placeholder="Item Price" value={price} onChange={function (event:any) {
                                     setPrice(event.target.value);
                                 }} />
 
                                 <p className="p-2 text-xl mx-5 font-semibold text-white">Select Category</p><br />
-                                <select className="mx-10 py-3 px-3 w-[800px] border-2 mt-1 border-black rounded-lg" value={categoryId} onChange={function (event: any) {
+                                <select className="mx-10 py-3 px-3 w-[800px] border-2 mt-1 border-black rounded-lg sm:w-[300px] lg:w-[700px] max-w-[800px]" value={categoryId} onChange={function (event: any) {
                                     setCategoryId(event.target.value);
                                 }}>
 
@@ -146,7 +146,7 @@ function Items() {
 
                         </form>
 
-                        <table className="table-auto w-full mt-5">
+                        <table className="table-auto w-full mt-5 sm:w-[500px] lg:w-[1200px] md:w-[800px]">
                             <thead>
                                 <tr className="bg-slate-500">
                                     <th className="p-2 w-[50px] text-center">#</th>
@@ -167,7 +167,7 @@ function Items() {
                                                 <td className="p-2 text-slate-600 border-b border-slate-200">{item.price}</td>
                                                 <td className="p-2 text-slate-600 border-b border-slate-200">{item.category.cname}</td>
                                                 <td ><button type="button" className="text-center p-2 mx-3 bg-green-500 w-24 font-semibold" onClick={() => editItem(item)}>Edit</button>
-                                                    <button type="button" className="text-center p-2  bg-red-700 w-24 font-semibold" onClick={() => deleteItem(item.ino)}>Delete</button>
+                                                    <button type="button" className="text-center p-2  bg-red-700 w-24 font-semibold sm:mx-3 lg:mx-0 md:mx-3" onClick={() => deleteItem(item.ino)}>Delete</button>
                                                 </td>
                                             </tr>
                                         )

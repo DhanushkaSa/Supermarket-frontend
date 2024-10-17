@@ -51,16 +51,16 @@ function Home() {
 
      return (
           <div className="container mx-auto my-10">
-               <p className="border rounded-lg text-5xl pb-10 text-center font-serif font-semibold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">Axio Supermarket</p>
-               <div className="w-10 h-10 mx-[1200px] ">
-                    <Link to="/orders" className="hover:text-red-600 "><img src="/src/assets/shopping cart.jpeg" className="py-4" />Shopping Cart</Link>
+               <p className="border rounded-lg text-5xl pb-10 text-center font-serif font-semibold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 sm-w-10 lg:w-[1300px] md:w-[800px]">Axio Supermarket</p>
+               <div className="w-10 h-10 lg:mx-[1200px] sm:mx-[550px] md:mx-[700px] md:my-10">
+                    <Link to="/orders" className="hover:text-red-600"><img src="/src/assets/shopping cart.jpeg" className="py-4" />Shopping Cart</Link>
                </div>
 
-               <div className="text-center">
-                    <h1 className="border px-5 py-5 w-44 rounded-lg text-center bg-green-400 font-semibold hover:bg-black hover:text-white cursor-pointer inline-block mx-5"><Link to="/categories">Category Details <br /><p className="font-bold text-red-600 text-xl">{categories.length}</p></Link></h1>
-                    <h1 className="border px-5 py-5 w-44 rounded-lg text-center bg-green-400 font-semibold  hover:bg-black hover:text-white cursor-pointer inline-block mx-5"><Link to="/items">Item Details <br /><p className="font-bold text-red-600 text-xl">{items.length}</p></Link></h1>
-                    <h1 className="border px-5 py-5 w-44 rounded-lg text-center bg-green-400 font-semibold  hover:bg-black hover:text-white cursor-pointer inline-block mx-5"><Link to="/stocks">Stock Details</Link></h1>
-                    <h1 className="border px-5 py-5 w-44 rounded-lg text-center bg-green-400 font-semibold  hover:bg-black hover:text-white cursor-pointer inline-block mx-5 " onClick={aboutUs}>About Us</h1>
+               <div className="text-center ">
+                    <h1 className="border px-5 py-5 w-44 rounded-lg text-center bg-green-400 font-semibold hover:bg-black hover:text-white cursor-pointer lg:inline-block mx-5 md:block md:my-2 sm:inline-flex"><Link to="/categories">Category Details <br /><p className="font-bold text-red-600 text-xl">{categories.length}</p></Link></h1>
+                    <h1 className="border px-5 py-5 w-44 rounded-lg text-center bg-green-400 font-semibold  hover:bg-black hover:text-white cursor-pointer lg:inline-block mx-5 md:block md:my-2 sm:inline-flex"><Link to="/items">Item Details <br /><p className="font-bold text-red-600 text-xl">{items.length}</p></Link></h1>
+                    <h1 className="border px-5 py-5 w-44 rounded-lg text-center bg-green-400 font-semibold  hover:bg-black hover:text-white cursor-pointer lg:inline-block mx-5 md:block md:my-2 sm:inline-flex"><Link to="/stocks">Stock Details</Link></h1>
+                    <h1 className="border px-5 py-5 w-44 rounded-lg text-center bg-green-400 font-semibold  hover:bg-black hover:text-white cursor-pointer lg:inline-block mx-5 md:block md:my-2 sm:inline-flex" onClick={aboutUs}>About Us</h1>
 
                </div>
 
@@ -69,15 +69,15 @@ function Home() {
                </div>
 
 
-               <div className="mt-20">
-                    <img src="/src/assets/toys.jpeg" className=" w-[300px] h-[200px] inline-block px-5 " alt="Toys" />
-                    <img src="/src/assets/clothes.jpeg" className=" w-[300px] h-[200px] inline-block px-5 " alt="Clothes" />
-                    <img src="/src/assets/kitchen.jpeg" className="w-[300px] h-[200px] inline-block px-5 " alt="Kitchen" />
-                    <img src="/src/assets/electronics.jpeg" className="w-[300px] h-[200px] inline-block px-5 " alt="Electronics" />
-                    <img src="/src/assets/fruit.jpg" className="w-[300px] h-[200px] inline-block px-5 pt-4" alt="Fruit" />
-                    <img src="/src/assets/milk.jpg" className="w-[300px] h-[200px] inline-block px-5 pt-4" alt="Milk" />
-                    <img src="/src/assets/vegitables.webp" className="w-[300px] h-[200px] inline-block px-5 pt-4" alt="Vegitables" />
-                    <img src="/src/assets/beltpaper.jpg" className="w-[300px] h-[200px] inline-block px-5 pt-4" alt="Beltpaper" />
+               <div className=" mt-20 ">
+                    <img src="/src/assets/toys.jpeg" className=" w-[300px] h-[200px] lg:inline-block px-5 sm:inline-flex md:inline-flex" alt="Toys" />
+                    <img src="/src/assets/clothes.jpeg" className=" w-[300px] h-[200px] lg:inline-block px-5 sm:inline-flex md:inline-flex" alt="Clothes" />
+                    <img src="/src/assets/kitchen.jpeg" className="w-[300px] h-[200px] lg:inline-block px-5 sm:inline-flex md:inline-flex" alt="Kitchen" />
+                    <img src="/src/assets/electronics.jpeg" className="w-[300px] h-[200px] lg:inline-block px-5 sm:inline-flex md:inline-flex" alt="Electronics" />
+                    <img src="/src/assets/fruit.jpg" className="w-[300px] h-[200px] lg:inline-block px-5 pt-4 sm:inline-flex md:inline-flex" alt="Fruit" />
+                    <img src="/src/assets/milk.jpg" className="w-[300px] h-[200px] lg:inline-block px-5 pt-4 sm:inline-flex md:inline-flex" alt="Milk" />
+                    <img src="/src/assets/vegitables.webp" className="w-[300px] h-[200px] lg:inline-block px-5 pt-4 sm:inline-flex md:inline-flex" alt="Vegitables" />
+                    <img src="/src/assets/beltpaper.jpg" className="w-[300px] h-[200px] lg:inline-block px-5 pt-4 sm:inline-flex md:inline-flex" alt="Beltpaper" />
 
 
 

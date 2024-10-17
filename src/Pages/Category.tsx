@@ -110,7 +110,7 @@ function Category() {
 
 
                     <div className="container mx-auto p-5">
-                         
+
                         <h1 className="text-center font-semibold text-blue-700 text-7xl font-mono italic">Category</h1>
                         <Link to="/" className="hover:text-red-600 text-lg font-bold">Back</Link>
 
@@ -119,13 +119,13 @@ function Category() {
                             <div className="border-2 mt-10 border-black shadow-lg rounded-xl bg-gray-800">
                                 <div>
                                     <p className="mx-5 my-5 text-white text-2xl">Category Name </p> <br />
-                                    <input type="text" className="mx-3 border-2 border-black rounded-lg p-3 w-[800px]" placeholder="Category Name" value={categoryName} onChange={function handleCategoryName(event) {
+                                    <input type="text" className="mx-3 border-2 border-black rounded-lg p-3 w-full sm:w-[300px] lg:w-[700px] max-w-[800px] " placeholder="Category Name" value={categoryName} onChange={function handleCategoryName(event) {
                                         setCategoryName(event.target.value);
                                     }} /><br />
                                 </div>
                                 <div>
                                     <p className="mx-5 my-5 text-white text-2xl">Description</p>
-                                    <textarea name="description" className="mx-3 my-5 border-2 border-black px-3 py-5 rounded-lg w-[800px] " placeholder="Write here about category description" value={description} onChange={function handleDescription(event) {
+                                    <textarea name="description" className="mx-3 my-5 border-2 border-black px-3 py-5 rounded-lg  w-full sm:w-[300px] lg:w-[600px] max-w-[800px]" placeholder="Write here about category description" value={description} onChange={function handleDescription(event) {
                                         setDescription(event.target.value);
                                     }}></textarea><br />
                                 </div>
@@ -139,7 +139,7 @@ function Category() {
                         </form>
 
 
-                        <table className="table-auto w-full mt-5">
+                        <table className="table-auto mt-5 sm:w-[500px] lg:w-[1200px] md:w-[800px]">
                             <thead>
                                 <tr className="bg-slate-500">
                                     <th className="p-2 w-[50px] text-center">#</th>
@@ -156,8 +156,8 @@ function Category() {
                                             <td className="text-center p-2 bg-slate-300">{index + 1}</td>
                                             <td className="text-center p-2 bg-slate-300">{category.cname}</td>
                                             <td className="text-center p-2 bg-slate-300">{category.description}</td>
-                                            <td><button type="button" className="text-center p-2 mx-2 bg-green-500 w-20 font-semibold" onClick={() => editCategories(category)}>Edit</button>
-                                                <button type="button" className="text-center p-2  bg-red-700 w-20 font-semibold" onClick={() => deleteCategoory(category.cid)}>Delete</button>
+                                            <td><button type="button" className="text-center p-2 mx-2 bg-green-500 w-20 font-semibold " onClick={() => editCategories(category)}>Edit</button>
+                                                <button type="button" className="text-center p-2  bg-red-700 w-20 font-semibold sm:mx-2 lg:mx-0 md:mx-2 " onClick={() => deleteCategoory(category.cid)}>Delete</button>
                                             </td>
                                         </tr>
                                     )

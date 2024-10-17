@@ -89,14 +89,14 @@ function Stock() {
                     <img src="/src/assets/R.gif" className="block mx-auto my-44 " />
                 ) : (
                     <div className="container mx-auto p-5">
-                        <h1 className="text-center font-semibold text-blue-700 text-7xl font-mono italic ">Stock Information</h1>
+                        <h1 className="text-center font-semibold text-blue-700 text-7xl font-mono italic md:m-5">Stock Information</h1>
                         <Link to="/" className="hover:text-red-600 text-lg font-bold">Back</Link>
 
                         <form>
                             <div className="border-2 border-black mt-5 rounded-lg bg-gray-800  shadow-lg">
                             <p className="p-2 text-xl mx-5 font-semibold text-white">Select Item</p><br />
 
-                            <select className="mx-10 py-3 px-3 w-[800px] border-2 mt-1 border-black rounded-lg" value={itemId} onChange={function (event: any) {
+                            <select className="mx-10 py-3 px-3 w-[800px] border-2 mt-1 border-black rounded-lg  sm:w-[300px] lg:w-[700px] max-w-[800px]" value={itemId} onChange={function (event: any) {
                                     setItemId(event.target.value);
                                 }}>
 
@@ -112,12 +112,12 @@ function Stock() {
                                 </select><br />
 
                                 <p className="p-2 my-5 mx-5 text-xl font-semibold text-white">Item Quantity</p> <br />
-                                <input type="number" className="mx-10 py-3 px-3 w-[800px] border-2 border-black rounded-lg" placeholder="Item Count" value={count} onChange={function (event:any) {
+                                <input type="number" className="mx-10 py-3 px-3 w-[800px] border-2 border-black rounded-lg  sm:w-[300px] lg:w-[700px] max-w-[800px]" placeholder="Item Count" value={count} onChange={function (event:any) {
                                     setCount(event.target.value);
                                 }} />
 
                                 <p className="p-2 text-xl mx-5 font-semibold text-white">Expire Date</p> <br />
-                                <input type="Date" className="mx-10 py-3 px-3 w-[800px] border-2 mt-1 border-black rounded-lg" placeholder="Item Price" value={date} onChange={function (event:any) {
+                                <input type="Date" className="mx-10 py-3 px-3 w-[800px] border-2 mt-1 border-black rounded-lg  sm:w-[300px] lg:w-[700px] max-w-[800px]" placeholder="Item Price" value={date} onChange={function (event:any) {
                                     setDate(event.target.value);
                                 }} />
 
