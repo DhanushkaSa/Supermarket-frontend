@@ -1,6 +1,8 @@
 import axios from "axios";
 import CategoryType from "../Types/CategoryType";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Home from "./Home";
 
 function Category() {
 
@@ -102,13 +104,15 @@ function Category() {
 
             {
                 showImg ? (
-                    <img src="/src/assets/R.gif" className="block mx-auto" />
+                    <img src="/src/assets/R.gif" className="block mx-auto my-48" />
                 ) : (
 
 
 
                     <div className="container mx-auto p-5">
-                        <h1 className="text-center font-semibold text-blue-700 text-5xl">Category</h1>
+                         
+                        <h1 className="text-center font-semibold text-blue-700 text-7xl font-mono italic">Category</h1>
+                        <Link to="/" className="hover:text-red-600 text-lg font-bold">Back</Link>
 
 
                         <form>
