@@ -5,6 +5,10 @@ import Category from './Pages/Category'
 import Orders from './Pages/Orders'
 import Items from './Pages/Items'
 import Stock from './Pages/Stock'
+import Login from './Pages/Login'
+import User from './Pages/User'
+
+
 
 function App() {
 
@@ -17,11 +21,17 @@ function App() {
 
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
+
+
+            <Route path="/home" element={<Home />} />
             <Route path="/categories" element={<Category />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/items" element={<Items />} />
             <Route path="/stocks" element={<Stock />} />
+            <Route path="/user" element={<User />} />
+            <Route path="/" element={<Login />} />
+
+
 
           </Routes>
 
@@ -31,7 +41,9 @@ function App() {
 
 
 
-      </div>
+
+
+      </div >
 
 
     </>

@@ -128,7 +128,7 @@ function Orders() {
 
                     <div className="container mx-auto my-auto">
                         <div>
-                            <h1 className="text-blue-700 font-bold text-3xl sm:text-center">Item List</h1>
+                            <h1 className="text-blue-700 font-bold sm:text-center text-5xl font-mono italic">Item List</h1>
 
                             <div className="w-10 h-10 my-5 lg:mx-[1200px] sm:mx-[400px]">
 

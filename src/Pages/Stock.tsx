@@ -90,7 +90,7 @@ function Stock() {
                 ) : (
                     <div className="container mx-auto p-5">
                         <h1 className="text-center font-semibold text-blue-700 text-7xl font-mono italic md:m-5">Stock Information</h1>
-                        <Link to="/" className="hover:text-red-600 text-lg font-bold">Back</Link>
+                        <Link to="/home" className="hover:text-red-600 text-lg font-bold">Back</Link>
 
                         <form>
                             <div className="border-2 border-black mt-5 rounded-lg bg-gray-800  shadow-lg">

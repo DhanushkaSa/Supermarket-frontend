@@ -2,7 +2,7 @@ import axios from "axios";
 import CategoryType from "../Types/CategoryType";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Home from "./Home";
+
 
 function Category() {
 
@@ -10,6 +10,7 @@ function Category() {
     const [categories, setCategories] = useState<CategoryType[]>([]);
     const [categoryName, setCategoryName] = useState<string>("");
     const [description, setDescription] = useState<string>("");
+
 
 
     async function loadCategories() {
@@ -23,12 +24,19 @@ function Category() {
 
     }
 
+
+
+
+
+
+
     async function addCategory() {
         try {
             await axios.post("http://localhost:8082/categories", {
                 cname: categoryName,
                 description: description
-            })
+            }
+            )
 
 
         } catch (error) {
@@ -67,7 +75,7 @@ function Category() {
         setDescription("");
     }
 
-    async function deleteCategoory(categoryId: number) {
+    async function deleteCategory(categoryId: number) {
         try {
             await axios.delete(`http://localhost:8082/categories/${categoryId}`);
 
@@ -83,14 +91,16 @@ function Category() {
 
 
     useEffect(function () {
+
         setTimeout(() => {
             setImage(false);
 
         }, 3000)
         loadCategories();
-
-
+        console.log(loadCategories.length);
     }, [])
+
+
 
 
 
@@ -112,7 +122,7 @@ function Category() {
                     <div className="container mx-auto p-5">
 
                         <h1 className="text-center font-semibold text-blue-700 text-7xl font-mono italic">Category</h1>
-                        <Link to="/" className="hover:text-red-600 text-lg font-bold">Back</Link>
+                        <Link to="/home" className="hover:text-red-600 text-lg font-bold">Back</Link>
 
 
                         <form>
@@ -152,12 +162,12 @@ function Category() {
 
                                 {categories.map(function (category: any, index: number) {
                                     return (
-                                        <tr>
+                                        <tr key={category.cid}>
                                             <td className="text-center p-2 bg-slate-300">{index + 1}</td>
                                             <td className="text-center p-2 bg-slate-300">{category.cname}</td>
                                             <td className="text-center p-2 bg-slate-300">{category.description}</td>
                                             <td><button type="button" className="text-center p-2 mx-2 bg-green-500 w-20 font-semibold " onClick={() => editCategories(category)}>Edit</button>
-                                                <button type="button" className="text-center p-2  bg-red-700 w-20 font-semibold sm:mx-2 lg:mx-0 md:mx-2 " onClick={() => deleteCategoory(category.cid)}>Delete</button>
+                                                <button type="button" className="text-center p-2  bg-red-700 w-20 font-semibold sm:mx-2 lg:mx-0 md:mx-2 " onClick={() => deleteCategory(category.cid)}>Delete</button>
                                             </td>
                                         </tr>
                                     )
