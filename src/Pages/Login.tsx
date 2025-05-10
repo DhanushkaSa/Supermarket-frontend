@@ -32,7 +32,7 @@ function Login() {
             } else {
 
 
-                const response = await axios.get("http://localhost:8082/users");
+                const response = await axios.get("http://localhost:8080/users");
 
                 setUsers(response.data);
 

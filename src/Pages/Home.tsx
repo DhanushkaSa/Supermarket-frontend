@@ -8,8 +8,8 @@ import ItemType from "../Types/ItemType";
 function Home() {
 
      const [showAboutUs, setShowAboutUs] = useState(false);
-     const [categories, setCategories] = useState<CategoryType[]>([]);
-     const [items, setItems] = useState<ItemType[]>([]);
+     const [, setCategories] = useState<CategoryType[]>([]);
+     const [, setItems] = useState<ItemType[]>([]);
 
      const aboutUsRef = useRef<HTMLDivElement>(null);
 
@@ -31,7 +31,7 @@ function Home() {
 
      async function loadCategories() {
           try {
-               const response = await axios.get("http://localhost:8082/categories");
+               const response = await axios.get("http://localhost:8080/categories");
                console.log("loadCategories are : ", response);
                setCategories(response.data);
 
@@ -43,7 +43,7 @@ function Home() {
 
      async function loadItems() {
           try {
-               const response = await axios.get("http://localhost:8082/items");
+               const response = await axios.get("http://localhost:8080/items");
                console.log("loadItems are : ", response);
                setItems(response.data);
           } catch (error) {

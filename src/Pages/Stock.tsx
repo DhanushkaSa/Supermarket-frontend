@@ -17,7 +17,7 @@ function Stock() {
 
     async function loadItems() {
         try {
-            const response = await axios.get("http://localhost:8082/items");
+            const response = await axios.get("http://localhost:8080/items");
             setItems(response.data); // Set items in state
             console.log(response.data);  // Log the response data to see if items are fetched
         } catch (error: any) {
@@ -27,7 +27,7 @@ function Stock() {
 
     async function createStock() {
         try {
-            await axios.post("http://localhost:8082/stocks", {
+            await axios.post("http://localhost:8080/stocks", {
                 quantity: count,
                 expireDate: date,
                 item: itemId
@@ -41,7 +41,7 @@ function Stock() {
 
     async function loadStock(){
         try {
-            const response=await axios.get("http://localhost:8082/stocks");
+            const response=await axios.get("http://localhost:8080/stocks");
             setStocks(response.data);
         } catch (error) {
             console.log(error);
@@ -50,7 +50,7 @@ function Stock() {
 
     async function updateStock(){
         try {
-            await axios.put(`http://localhost:8082/stocks/${edit?.stockId}`,{
+            await axios.put(`http://localhost:8080/stocks/${edit?.stockId}`,{
                 quantity: count,
                 expireDate: date,
                 item: itemId

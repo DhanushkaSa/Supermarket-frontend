@@ -15,7 +15,7 @@ function Category() {
 
     async function loadCategories() {
         try {
-            const response = await axios.get("http://localhost:8082/categories");
+            const response = await axios.get("http://localhost:8080/categories");
             setCategories(response.data);
 
         } catch (error) {
@@ -32,7 +32,7 @@ function Category() {
 
     async function addCategory() {
         try {
-            await axios.post("http://localhost:8082/categories", {
+            await axios.post("http://localhost:8080/categories", {
                 cname: categoryName,
                 description: description
             }
@@ -60,7 +60,7 @@ function Category() {
 
     async function updateCategory() {
         try {
-            await axios.put(`http://localhost:8082/categories/${editCategory?.cid}`, {
+            await axios.put(`http://localhost:8080/categories/${editCategory?.cid}`, {
                 cname: categoryName,
                 description: description
             });
@@ -77,7 +77,7 @@ function Category() {
 
     async function deleteCategory(categoryId: number) {
         try {
-            await axios.delete(`http://localhost:8082/categories/${categoryId}`);
+            await axios.delete(`http://localhost:8080/categories/${categoryId}`);
 
         } catch (error) {
             console.log(error);

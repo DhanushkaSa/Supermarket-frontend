@@ -1,6 +1,6 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function User() {
 
@@ -28,7 +28,7 @@ function User() {
                     password: password
                 }
 
-                await axios.post("http://localhost:8082/users", details);
+                await axios.post("http://localhost:8080/users", details);
                 console.log(details);
                 setStay(true);
                 setTimeout(() => {

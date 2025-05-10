@@ -20,7 +20,7 @@ function Orders() {
 
     async function loadItems() {
         try {
-            const response = await axios.get("http://localhost:8082/items");
+            const response = await axios.get("http://localhost:8080/items");
             setItems(response.data); // Set items in state
             console.log(response.data);  // Log the response data to see if items are fetched
         } catch (error: any) {
@@ -34,7 +34,7 @@ function Orders() {
 
     async function loadStock() {
         try {
-            const response = await axios.get("http://localhost:8082/stocks");
+            const response = await axios.get("http://localhost:8080/stocks");
             setStocks(response.data);
         } catch (error) {
             console.log(error);
@@ -66,7 +66,7 @@ function Orders() {
 
             {
                 stock.map(async function (id) {
-                    await axios.put(`http://localhost:8082/stocks/${id.stockId}`, {
+                    await axios.put(`http://localhost:8080/stocks/${id.stockId}`, {
                         quantity: id.quantity,
                         expireDate: id.expireDate,
                         item: id.item.ino

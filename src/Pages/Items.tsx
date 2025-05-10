@@ -17,7 +17,7 @@ function Items() {
 
     async function loadCategories() {
         try {
-            const response = await axios.get("http://localhost:8082/categories");
+            const response = await axios.get("http://localhost:8080/categories");
             setCategories(response.data);
 
         } catch (error) {
@@ -28,7 +28,7 @@ function Items() {
 
     async function loadItems() {
         try {
-            const response = await axios.get("http://localhost:8082/items");
+            const response = await axios.get("http://localhost:8080/items");
             setItems(response.data); // Set items in state
             console.log(response.data);  // Log the response data to see if items are fetched
         } catch (error: any) {
@@ -38,7 +38,7 @@ function Items() {
 
     async function createItem() {
         try {
-            await axios.post("http://localhost:8082/items", {
+            await axios.post("http://localhost:8080/items", {
                 iname: itemName,
                 price: price,
                 categoryId: categoryId
@@ -52,7 +52,7 @@ function Items() {
 
     async function deleteItem(itemId: number) {
         try {
-            await axios.delete(`http://localhost:8082/items/${itemId}`);
+            await axios.delete(`http://localhost:8080/items/${itemId}`);
             loadItems();
         } catch (error) {
             console.log(error);
@@ -68,7 +68,7 @@ function Items() {
 
     async function updateItem() {
         try {
-            await axios.put(`http://localhost:8082/items/${editItems?.ino}`, {
+            await axios.put(`http://localhost:8080/items/${editItems?.ino}`, {
                 iname: itemName,
                 price: price,
                 categoryId: categoryId
